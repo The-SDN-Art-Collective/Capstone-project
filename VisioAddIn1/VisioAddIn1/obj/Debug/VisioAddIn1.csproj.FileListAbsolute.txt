@@ -1,0 +1,13 @@
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\bin\Debug\VisioAddIn1.dll
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\bin\Debug\VisioAddIn1.pdb
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\bin\Debug\VisioAddIn1.dll.manifest
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\bin\Debug\VisioAddIn1.vsto
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\bin\Debug\Microsoft.Office.Tools.Common.v4.0.Utilities.dll
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\obj\Debug\VisioAddIn1.csproj.AssemblyReference.cache
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\obj\Debug\VisioAddIn1.Properties.Resources.resources
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\obj\Debug\VisioAddIn1.csproj.GenerateResource.cache
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\obj\Debug\VisioAddIn1.csproj.CoreCompileInputs.cache
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\obj\Debug\VisioAddIn1.csproj.CopyComplete
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\obj\Debug\VisioAddIn1.dll
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\obj\Debug\VisioAddIn1.pdb
+D:\Capstone\Capstone-project\VisioAddIn1\VisioAddIn1\obj\Debug\VisioAddIn1.Ribbon1.resources

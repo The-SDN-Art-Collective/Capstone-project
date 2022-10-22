@@ -5,6 +5,7 @@ using System.Text;
 using System.Xml.Linq;
 using Visio = Microsoft.Office.Interop.Visio;
 using Office = Microsoft.Office.Core;
+using System.Windows.Forms;
 
 namespace VisioAddIn1
 {
@@ -16,6 +17,7 @@ namespace VisioAddIn1
 
         private void ThisAddIn_Shutdown(object sender, System.EventArgs e)
         {
+
         }
 
         #region VSTO generated code
