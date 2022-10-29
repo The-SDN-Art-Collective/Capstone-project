@@ -5,8 +5,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
+
+
 namespace VisioAddIn1
 {
+
     public partial class Ribbon1
     {
         private void Ribbon1_Load(object sender, RibbonUIEventArgs e)
@@ -16,7 +20,14 @@ namespace VisioAddIn1
 
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
-            MessageBox.Show("I Choose Me Im Sorry. ");
+            //isioAddIn1.ThisAddIn MainOb = Globals.ThisAddIn;
+            Globals.ThisAddIn.DrawRectangle();
+=
+        }
+
+        private void button1_Click_1(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisAddIn.DrawHex();
 
         }
     }
