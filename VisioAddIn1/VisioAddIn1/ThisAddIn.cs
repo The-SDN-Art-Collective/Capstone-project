@@ -6,8 +6,7 @@ using System.Xml.Linq;
 using Visio = Microsoft.Office.Interop.Visio;
 using Office = Microsoft.Office.Core;
 using System.Windows.Forms;
-
-
+using Microsoft.Office.Interop.Visio;
 
 namespace VisioAddIn1
 {
@@ -23,7 +22,13 @@ namespace VisioAddIn1
 
         }
 
-        public void DrawRectangle()
+        /// <summary>
+        /// Draws a Rectangle, returns the shape
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public Visio.Shape DrawRectangle( double x, double y)
         {
 
            Visio.Documents visioDocs = this.Application.Documents;
@@ -32,20 +37,22 @@ namespace VisioAddIn1
 
             Visio.Page visioPage = this.Application.ActivePage;
 
-            Visio.Master visioRectMaster = visioStencil.Masters.get_ItemU(@"Rectangle");
-            Visio.Shape visioRectShape = visioPage.Drop(visioRectMaster, 4.25, 5.5);
+            Visio.Master visioRectMaster = visioStencil.Masters.get_ItemU(@"Cross");
+            Visio.Shape visioRectShape = visioPage.Drop(visioRectMaster, x, y);
             visioRectShape.Text = @"Rectangle text.";
-            
-            //Visio.Master visioStarMaster = visioStencil.Masters.get_ItemU(@"5-Point Star 7");
-            //Visio.Shape visioStarShape = visioPage.Drop(visioStarMaster, 2.0, 5.5);
-            //visioStarShape.Text = @"Star text.";
 
-            //Visio.Master visioHexagonMaster = visioStencil.Masters.get_ItemU(@"Hexagon");
-            //Visio.Shape visioHexagonShape = visioPage.Drop(visioHexagonMaster, 7.0, 5.5);
-            //visioHexagonShape.Text = @"Hexagon text."; */
+            return visioRectShape;
+            
+      
         }
 
-        public void DrawHex()
+        /// <summary>
+        /// Draws a Hexagon, returns the shape
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <returns></returns>
+        public Visio.Shape DrawHex(double x, double y)
         {
 
             Visio.Documents visioDocs = this.Application.Documents;
@@ -54,17 +61,21 @@ namespace VisioAddIn1
 
             Visio.Page visioPage = this.Application.ActivePage;
 
-           /* Visio.Master visioRectMaster = visioStencil.Masters.get_ItemU(@"Rectangle");
-            Visio.Shape visioRectShape = visioPage.Drop(visioRectMaster, 4.25, 5.5);
-            visioRectShape.Text = @"Rectangle text.";*/
-
-            /*Visio.Master visioStarMaster = visioStencil.Masters.get_ItemU(@"5-Point Star 7");
-            Visio.Shape visioStarShape = visioPage.Drop(visioStarMaster, 2.0, 5.5);
-            visioStarShape.Text = @"Star text.";*/
-
             Visio.Master visioHexagonMaster = visioStencil.Masters.get_ItemU(@"Hexagon");
-            Visio.Shape visioHexagonShape = visioPage.Drop(visioHexagonMaster, 7.0, 5.5);
-            visioHexagonShape.Text = @"Hexagon text."; 
+            Visio.Shape visioHexagonShape = visioPage.Drop(visioHexagonMaster, x, y);
+            visioHexagonShape.Text = @"Hexagon text.";
+
+            return visioHexagonShape;
+        }
+
+        public void DrawConnection(double x, double y)
+        {
+           Visio.Shape Rectangle = DrawRectangle(x, y);
+           Visio.Shape Hexagon = DrawHex(x+5, y-5);
+
+            Rectangle.AutoConnect(Hexagon, VisAutoConnectDir.visAutoConnectDirNone);
+
+            
         }
 
         #region VSTO generated code

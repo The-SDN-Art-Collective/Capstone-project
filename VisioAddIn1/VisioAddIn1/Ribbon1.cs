@@ -21,14 +21,18 @@ namespace VisioAddIn1
         private void button1_Click(object sender, RibbonControlEventArgs e)
         {
             //isioAddIn1.ThisAddIn MainOb = Globals.ThisAddIn;
-            Globals.ThisAddIn.DrawRectangle();
-=
+            Globals.ThisAddIn.DrawRectangle(4.25, 5.5);
         }
 
         private void button1_Click_1(object sender, RibbonControlEventArgs e)
         {
-            Globals.ThisAddIn.DrawHex();
+            Globals.ThisAddIn.DrawHex(4.25, 5.5);
 
+        }
+
+        private void button2_Click(object sender, RibbonControlEventArgs e)
+        {
+            Globals.ThisAddIn.DrawConnection(5.5, 0);
         }
     }
 }
